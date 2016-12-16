@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50108EA21E01504B00875DBB /* GRReadonlyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EA11E01504B00875DBB /* GRReadonlyTextView.m */; };
+		50108EA41E01505800875DBB /* GRReadonlyTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50108EA31E01505800875DBB /* GRReadonlyTextView.xib */; };
+		50108EA81E02998D00875DBB /* GRColorPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EA71E02998C00875DBB /* GRColorPickerButton.m */; };
+		50108EAA1E0299A200875DBB /* GRColorPickerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50108EA91E0299A200875DBB /* GRColorPickerButton.xib */; };
+		50108EAD1E029FA500875DBB /* GRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EAC1E029FA500875DBB /* GRColorPickerView.m */; };
+		50108EBB1E02B0F200875DBB /* GRColorPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EB91E02B0F200875DBB /* GRColorPickerCollectionViewCell.m */; };
+		50108EBC1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50108EBA1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib */; };
+		50ACA09F1E01272500BA9A3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA09E1E01272500BA9A3C /* main.m */; };
+		50ACA0A21E01272500BA9A3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA0A11E01272500BA9A3C /* AppDelegate.m */; };
+		50ACA0A51E01272500BA9A3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA0A41E01272500BA9A3C /* ViewController.m */; };
+		50ACA0A81E01272500BA9A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0A61E01272500BA9A3C /* Main.storyboard */; };
+		50ACA0AA1E01272500BA9A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0A91E01272500BA9A3C /* Assets.xcassets */; };
+		50ACA0AD1E01272500BA9A3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0AB1E01272500BA9A3C /* LaunchScreen.storyboard */; };
+		50ACA0B61E0134FA00BA9A3C /* GRTextEditerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA0B51E0134FA00BA9A3C /* GRTextEditerView.m */; };
+		50ACA0B81E01350C00BA9A3C /* GRTextEditerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0B71E01350C00BA9A3C /* GRTextEditerView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50108EA01E01504B00875DBB /* GRReadonlyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRReadonlyTextView.h; sourceTree = "<group>"; };
+		50108EA11E01504B00875DBB /* GRReadonlyTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRReadonlyTextView.m; sourceTree = "<group>"; };
+		50108EA31E01505800875DBB /* GRReadonlyTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRReadonlyTextView.xib; sourceTree = "<group>"; };
+		50108EA61E02998C00875DBB /* GRColorPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerButton.h; sourceTree = "<group>"; };
+		50108EA71E02998C00875DBB /* GRColorPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerButton.m; sourceTree = "<group>"; };
+		50108EA91E0299A200875DBB /* GRColorPickerButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRColorPickerButton.xib; sourceTree = "<group>"; };
+		50108EAB1E029FA500875DBB /* GRColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerView.h; sourceTree = "<group>"; };
+		50108EAC1E029FA500875DBB /* GRColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerView.m; sourceTree = "<group>"; };
+		50108EB81E02B0F200875DBB /* GRColorPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerCollectionViewCell.h; sourceTree = "<group>"; };
+		50108EB91E02B0F200875DBB /* GRColorPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerCollectionViewCell.m; sourceTree = "<group>"; };
+		50108EBA1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRColorPickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		50ACA09A1E01272500BA9A3C /* InstagramMyStoryTextEditerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramMyStoryTextEditerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50ACA09E1E01272500BA9A3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50ACA0A01E01272500BA9A3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50ACA0A11E01272500BA9A3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50ACA0A31E01272500BA9A3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50ACA0A41E01272500BA9A3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		50ACA0A71E01272500BA9A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50ACA0A91E01272500BA9A3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50ACA0AC1E01272500BA9A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50ACA0AE1E01272500BA9A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50ACA0B41E0134FA00BA9A3C /* GRTextEditerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTextEditerView.h; sourceTree = "<group>"; };
+		50ACA0B51E0134FA00BA9A3C /* GRTextEditerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTextEditerView.m; sourceTree = "<group>"; };
+		50ACA0B71E01350C00BA9A3C /* GRTextEditerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRTextEditerView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50ACA0971E01272500BA9A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50ACA0911E01272500BA9A3C = {
+			isa = PBXGroup;
+			children = (
+				50ACA09C1E01272500BA9A3C /* TextDemo */,
+				50ACA09B1E01272500BA9A3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50ACA09B1E01272500BA9A3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50ACA09A1E01272500BA9A3C /* InstagramMyStoryTextEditerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50ACA09C1E01272500BA9A3C /* TextDemo */ = {
+			isa = PBXGroup;
+			children = (
+				50ACA0A01E01272500BA9A3C /* AppDelegate.h */,
+				50ACA0A11E01272500BA9A3C /* AppDelegate.m */,
+				50ACA0A31E01272500BA9A3C /* ViewController.h */,
+				50ACA0A41E01272500BA9A3C /* ViewController.m */,
+				50ACA0A61E01272500BA9A3C /* Main.storyboard */,
+				50ACA0A91E01272500BA9A3C /* Assets.xcassets */,
+				50ACA0AB1E01272500BA9A3C /* LaunchScreen.storyboard */,
+				50ACA0AE1E01272500BA9A3C /* Info.plist */,
+				50108EA61E02998C00875DBB /* GRColorPickerButton.h */,
+				50108EA71E02998C00875DBB /* GRColorPickerButton.m */,
+				50108EA91E0299A200875DBB /* GRColorPickerButton.xib */,
+				50ACA09D1E01272500BA9A3C /* Supporting Files */,
+				50ACA0B41E0134FA00BA9A3C /* GRTextEditerView.h */,
+				50ACA0B51E0134FA00BA9A3C /* GRTextEditerView.m */,
+				50ACA0B71E01350C00BA9A3C /* GRTextEditerView.xib */,
+				50108EA01E01504B00875DBB /* GRReadonlyTextView.h */,
+				50108EA11E01504B00875DBB /* GRReadonlyTextView.m */,
+				50108EA31E01505800875DBB /* GRReadonlyTextView.xib */,
+				50108EAB1E029FA500875DBB /* GRColorPickerView.h */,
+				50108EAC1E029FA500875DBB /* GRColorPickerView.m */,
+				50108EB81E02B0F200875DBB /* GRColorPickerCollectionViewCell.h */,
+				50108EB91E02B0F200875DBB /* GRColorPickerCollectionViewCell.m */,
+				50108EBA1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib */,
+			);
+			path = TextDemo;
+			sourceTree = "<group>";
+		};
+		50ACA09D1E01272500BA9A3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50ACA09E1E01272500BA9A3C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50ACA0991E01272500BA9A3C /* InstagramMyStoryTextEditerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50ACA0B11E01272500BA9A3C /* Build configuration list for PBXNativeTarget "InstagramMyStoryTextEditerDemo" */;
+			buildPhases = (
+				50ACA0961E01272500BA9A3C /* Sources */,
+				50ACA0971E01272500BA9A3C /* Frameworks */,
+				50ACA0981E01272500BA9A3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstagramMyStoryTextEditerDemo;
+			productName = TextDemo;
+			productReference = 50ACA09A1E01272500BA9A3C /* InstagramMyStoryTextEditerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50ACA0921E01272500BA9A3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = liangzhimy;
+				TargetAttributes = {
+					50ACA0991E01272500BA9A3C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LR2DH4466E;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 50ACA0951E01272500BA9A3C /* Build configuration list for PBXProject "InstagramMyStoryTextEditerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50ACA0911E01272500BA9A3C;
+			productRefGroup = 50ACA09B1E01272500BA9A3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50ACA0991E01272500BA9A3C /* InstagramMyStoryTextEditerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50ACA0981E01272500BA9A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50108EA41E01505800875DBB /* GRReadonlyTextView.xib in Resources */,
+				50108EBC1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib in Resources */,
+				50ACA0AD1E01272500BA9A3C /* LaunchScreen.storyboard in Resources */,
+				50108EAA1E0299A200875DBB /* GRColorPickerButton.xib in Resources */,
+				50ACA0AA1E01272500BA9A3C /* Assets.xcassets in Resources */,
+				50ACA0A81E01272500BA9A3C /* Main.storyboard in Resources */,
+				50ACA0B81E01350C00BA9A3C /* GRTextEditerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50ACA0961E01272500BA9A3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50ACA0A51E01272500BA9A3C /* ViewController.m in Sources */,
+				50108EA21E01504B00875DBB /* GRReadonlyTextView.m in Sources */,
+				50ACA0A21E01272500BA9A3C /* AppDelegate.m in Sources */,
+				50ACA09F1E01272500BA9A3C /* main.m in Sources */,
+				50108EBB1E02B0F200875DBB /* GRColorPickerCollectionViewCell.m in Sources */,
+				50108EAD1E029FA500875DBB /* GRColorPickerView.m in Sources */,
+				50108EA81E02998D00875DBB /* GRColorPickerButton.m in Sources */,
+				50ACA0B61E0134FA00BA9A3C /* GRTextEditerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50ACA0A61E01272500BA9A3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50ACA0A71E01272500BA9A3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50ACA0AB1E01272500BA9A3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50ACA0AC1E01272500BA9A3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50ACA0AF1E01272500BA9A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50ACA0B01E01272500BA9A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50ACA0B21E01272500BA9A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LR2DH4466E;
+				INFOPLIST_FILE = TextDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zl.TextDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50ACA0B31E01272500BA9A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LR2DH4466E;
+				INFOPLIST_FILE = TextDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zl.TextDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50ACA0951E01272500BA9A3C /* Build configuration list for PBXProject "InstagramMyStoryTextEditerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50ACA0AF1E01272500BA9A3C /* Debug */,
+				50ACA0B01E01272500BA9A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50ACA0B11E01272500BA9A3C /* Build configuration list for PBXNativeTarget "InstagramMyStoryTextEditerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50ACA0B21E01272500BA9A3C /* Debug */,
+				50ACA0B31E01272500BA9A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50ACA0921E01272500BA9A3C /* Project object */;
+}

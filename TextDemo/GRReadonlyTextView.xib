@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GRReadonlyTextView">
+            <rect key="frame" x="0.0" y="0.0" width="137" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IhH-CP-CQe">
+                    <rect key="frame" x="0.0" y="0.0" width="137" height="140"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1k-LK-4l6">
+                    <rect key="frame" x="0.0" y="0.0" width="137" height="140"/>
+                    <connections>
+                        <action selector="buttonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="n2I-2k-y3o"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IhH-CP-CQe" secondAttribute="bottom" id="JO4-9J-Kl1"/>
+                <constraint firstAttribute="trailing" secondItem="IhH-CP-CQe" secondAttribute="trailing" id="LfX-iV-r9F"/>
+                <constraint firstItem="IhH-CP-CQe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zh4-PX-C7e"/>
+                <constraint firstAttribute="bottom" secondItem="v1k-LK-4l6" secondAttribute="bottom" id="b0N-LM-V3W"/>
+                <constraint firstItem="v1k-LK-4l6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bCn-S4-ohC"/>
+                <constraint firstItem="v1k-LK-4l6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="r9Q-dZ-xv6"/>
+                <constraint firstItem="IhH-CP-CQe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z9n-iq-Wda"/>
+                <constraint firstAttribute="trailing" secondItem="v1k-LK-4l6" secondAttribute="trailing" id="zci-NF-EfL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textView" destination="IhH-CP-CQe" id="CBT-9p-LyR"/>
+                <outlet property="touchButton" destination="v1k-LK-4l6" id="xuY-RR-yEc"/>
+            </connections>
+            <point key="canvasLocation" x="-83.5" y="-209"/>
+        </view>
+    </objects>
+</document>
