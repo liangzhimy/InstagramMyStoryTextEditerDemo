@@ -14,7 +14,7 @@ static const CGFloat __GRTextViewHeight = 43;
 static const CGFloat __GRAnimationDuration = .2;
 static const CGFloat __GRMinTouchWidth = 50;
 static const CGFloat __GRMinTouchHeight = 50;
-static const CGFloat __GREditFinishButtonAlpha = .5f;
+static const CGFloat __GREditFinishButtonAlpha = 0.75f;
 static const CGFloat __GRHalf = .5f;
 
 @interface GRTextEditerView () <GRReadonlyTextViewDelegate, UITextViewDelegate>

@@ -22,11 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfz-Te-jCo" userLabel="textEditerContainerView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="627"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8H-os-1EG" userLabel="colorPickerContainerView">
                                 <rect key="frame" x="0.0" y="645" width="375" height="22"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="JSv-2B-uxk"/>
                                 </constraints>
@@ -34,7 +33,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lfz-Te-jCo" secondAttribute="bottom" id="0hs-qZ-btt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lfz-Te-jCo" secondAttribute="bottom" constant="20" id="0hs-qZ-btt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z8H-os-1EG" secondAttribute="bottom" id="10a-o4-GN8"/>
                             <constraint firstAttribute="trailing" secondItem="lfz-Te-jCo" secondAttribute="trailing" id="1Gl-Qm-oUZ"/>
                             <constraint firstAttribute="trailing" secondItem="Z8H-os-1EG" secondAttribute="trailing" id="Buf-nV-wnI"/>

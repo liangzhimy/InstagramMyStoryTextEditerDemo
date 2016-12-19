@@ -67,12 +67,12 @@ static NSString * const __GRCollectionCellIdntifier = @"cellId";
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         [self addSubview:_collectionView];
-        _collectionView.backgroundColor = [UIColor brownColor];
         [_collectionView setShowsHorizontalScrollIndicator:FALSE];
         
         UINib *nib = [UINib nibWithNibName:@"GRColorPickerCollectionViewCell"
                                     bundle: [NSBundle mainBundle]];
         [_collectionView registerNib:nib forCellWithReuseIdentifier:__GRCollectionCellIdntifier];
+        _collectionView.backgroundColor = [UIColor clearColor]; 
         
         _collectionView.delegate = self;
         _collectionView.dataSource = self;

@@ -10,6 +10,8 @@
 #import "GRTextEditerView.h"
 #import "GRColorPickerView.h"
 
+static const CGFloat __GRDefaultPickerOffsetY = 20;
+
 @interface ViewController () <GRColorPickerViewDelegate>
 
 @property (strong, nonatomic) GRTextEditerView *textEditerView;
@@ -129,6 +131,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
+
 - (void)keyboardWillShow:(NSNotification *)notification {
     NSDictionary *info = [notification userInfo];
     NSValue *kbFrame = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
@@ -137,7 +140,7 @@
     
     CGFloat height = keyboardFrame.size.height;
     
-    self.pickerColorViewContraint.constant = height;
+    self.pickerColorViewContraint.constant = height + __GRDefaultPickerOffsetY;
     self.colorPickerContainerView.hidden = FALSE;
    
     [UIView animateWithDuration:animationDuration animations:^{
@@ -145,11 +148,12 @@
     }];
 }
 
+
 - (void)keyboardWillHide:(NSNotification *)notification {
     NSDictionary *info = [notification userInfo];
     NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
-    self.pickerColorViewContraint.constant = 0;
+    self.pickerColorViewContraint.constant = __GRDefaultPickerOffsetY;
     [UIView animateWithDuration:animationDuration animations:^{
         [self.view layoutIfNeeded];
         self.colorPickerContainerView.hidden = TRUE;
