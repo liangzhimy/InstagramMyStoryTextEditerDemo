@@ -32,7 +32,7 @@ static const CGFloat __GRHalf = .5f;
     [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
     self.textView.backgroundColor = [UIColor clearColor]; 
-    self.isEditing = TRUE;
+    self.isEditing = FALSE;
 }
 
 - (void)config {
@@ -53,7 +53,7 @@ static const CGFloat __GRHalf = .5f;
     [self.readonlyTextView layoutIfNeeded];
     [self.readonlyTextView layoutSubviews];
     
-    self.isEditing = TRUE;
+    self.isEditing = FALSE;
 }
 
 - (void)readonlyTextViewTapGesture:(id)sender {

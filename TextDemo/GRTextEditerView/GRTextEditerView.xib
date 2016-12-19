@@ -20,7 +20,6 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyx-Za-X7F" userLabel="editFinishButton">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="editFinishButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="MCi-WM-pgX"/>
                             </connections>
@@ -29,11 +28,11 @@
                             <rect key="frame" x="0.0" y="203" width="374" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.2901960784" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="tyx-Za-X7F" firstAttribute="leading" secondItem="6dx-fZ-S0n" secondAttribute="leading" id="H0H-J5-eJq"/>
                         <constraint firstItem="tyx-Za-X7F" firstAttribute="top" secondItem="6dx-fZ-S0n" secondAttribute="top" id="XrM-fm-yaj"/>
@@ -42,7 +41,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6dx-fZ-S0n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nvk-lL-pfX"/>
                 <constraint firstItem="6dx-fZ-S0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WiD-1t-8n0"/>
