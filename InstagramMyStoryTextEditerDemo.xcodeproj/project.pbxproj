@@ -7,35 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50108EA21E01504B00875DBB /* GRReadonlyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EA11E01504B00875DBB /* GRReadonlyTextView.m */; };
-		50108EA41E01505800875DBB /* GRReadonlyTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50108EA31E01505800875DBB /* GRReadonlyTextView.xib */; };
-		50108EA81E02998D00875DBB /* GRColorPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EA71E02998C00875DBB /* GRColorPickerButton.m */; };
-		50108EAA1E0299A200875DBB /* GRColorPickerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50108EA91E0299A200875DBB /* GRColorPickerButton.xib */; };
-		50108EAD1E029FA500875DBB /* GRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EAC1E029FA500875DBB /* GRColorPickerView.m */; };
-		50108EBB1E02B0F200875DBB /* GRColorPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50108EB91E02B0F200875DBB /* GRColorPickerCollectionViewCell.m */; };
-		50108EBC1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50108EBA1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib */; };
+		503F92241E07880B00550B6F /* GRColorPickerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 503F92171E07880B00550B6F /* GRColorPickerButton.m */; };
+		503F92251E07880B00550B6F /* GRColorPickerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503F92181E07880B00550B6F /* GRColorPickerButton.xib */; };
+		503F92261E07880B00550B6F /* GRColorPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 503F921A1E07880B00550B6F /* GRColorPickerCollectionViewCell.m */; };
+		503F92271E07880B00550B6F /* GRColorPickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503F921B1E07880B00550B6F /* GRColorPickerCollectionViewCell.xib */; };
+		503F92281E07880B00550B6F /* GRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503F921D1E07880B00550B6F /* GRColorPickerView.m */; };
+		503F92291E07880B00550B6F /* GRReadonlyTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503F921F1E07880B00550B6F /* GRReadonlyTextView.m */; };
+		503F922A1E07880B00550B6F /* GRReadonlyTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503F92201E07880B00550B6F /* GRReadonlyTextView.xib */; };
+		503F922B1E07880B00550B6F /* GRTextEditerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503F92221E07880B00550B6F /* GRTextEditerView.m */; };
+		503F922C1E07880B00550B6F /* GRTextEditerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503F92231E07880B00550B6F /* GRTextEditerView.xib */; };
 		50ACA09F1E01272500BA9A3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA09E1E01272500BA9A3C /* main.m */; };
 		50ACA0A21E01272500BA9A3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA0A11E01272500BA9A3C /* AppDelegate.m */; };
 		50ACA0A51E01272500BA9A3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA0A41E01272500BA9A3C /* ViewController.m */; };
 		50ACA0A81E01272500BA9A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0A61E01272500BA9A3C /* Main.storyboard */; };
 		50ACA0AA1E01272500BA9A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0A91E01272500BA9A3C /* Assets.xcassets */; };
 		50ACA0AD1E01272500BA9A3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0AB1E01272500BA9A3C /* LaunchScreen.storyboard */; };
-		50ACA0B61E0134FA00BA9A3C /* GRTextEditerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACA0B51E0134FA00BA9A3C /* GRTextEditerView.m */; };
-		50ACA0B81E01350C00BA9A3C /* GRTextEditerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50ACA0B71E01350C00BA9A3C /* GRTextEditerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		50108EA01E01504B00875DBB /* GRReadonlyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRReadonlyTextView.h; sourceTree = "<group>"; };
-		50108EA11E01504B00875DBB /* GRReadonlyTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRReadonlyTextView.m; sourceTree = "<group>"; };
-		50108EA31E01505800875DBB /* GRReadonlyTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRReadonlyTextView.xib; sourceTree = "<group>"; };
-		50108EA61E02998C00875DBB /* GRColorPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerButton.h; sourceTree = "<group>"; };
-		50108EA71E02998C00875DBB /* GRColorPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerButton.m; sourceTree = "<group>"; };
-		50108EA91E0299A200875DBB /* GRColorPickerButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRColorPickerButton.xib; sourceTree = "<group>"; };
-		50108EAB1E029FA500875DBB /* GRColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerView.h; sourceTree = "<group>"; };
-		50108EAC1E029FA500875DBB /* GRColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerView.m; sourceTree = "<group>"; };
-		50108EB81E02B0F200875DBB /* GRColorPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerCollectionViewCell.h; sourceTree = "<group>"; };
-		50108EB91E02B0F200875DBB /* GRColorPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerCollectionViewCell.m; sourceTree = "<group>"; };
-		50108EBA1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRColorPickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		503F92161E07880B00550B6F /* GRColorPickerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerButton.h; sourceTree = "<group>"; };
+		503F92171E07880B00550B6F /* GRColorPickerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerButton.m; sourceTree = "<group>"; };
+		503F92181E07880B00550B6F /* GRColorPickerButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRColorPickerButton.xib; sourceTree = "<group>"; };
+		503F92191E07880B00550B6F /* GRColorPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerCollectionViewCell.h; sourceTree = "<group>"; };
+		503F921A1E07880B00550B6F /* GRColorPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerCollectionViewCell.m; sourceTree = "<group>"; };
+		503F921B1E07880B00550B6F /* GRColorPickerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRColorPickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		503F921C1E07880B00550B6F /* GRColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRColorPickerView.h; sourceTree = "<group>"; };
+		503F921D1E07880B00550B6F /* GRColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRColorPickerView.m; sourceTree = "<group>"; };
+		503F921E1E07880B00550B6F /* GRReadonlyTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRReadonlyTextView.h; sourceTree = "<group>"; };
+		503F921F1E07880B00550B6F /* GRReadonlyTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRReadonlyTextView.m; sourceTree = "<group>"; };
+		503F92201E07880B00550B6F /* GRReadonlyTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRReadonlyTextView.xib; sourceTree = "<group>"; };
+		503F92211E07880B00550B6F /* GRTextEditerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTextEditerView.h; sourceTree = "<group>"; };
+		503F92221E07880B00550B6F /* GRTextEditerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTextEditerView.m; sourceTree = "<group>"; };
+		503F92231E07880B00550B6F /* GRTextEditerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRTextEditerView.xib; sourceTree = "<group>"; };
 		50ACA09A1E01272500BA9A3C /* InstagramMyStoryTextEditerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramMyStoryTextEditerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ACA09E1E01272500BA9A3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50ACA0A01E01272500BA9A3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,9 +49,6 @@
 		50ACA0A91E01272500BA9A3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50ACA0AC1E01272500BA9A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50ACA0AE1E01272500BA9A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50ACA0B41E0134FA00BA9A3C /* GRTextEditerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTextEditerView.h; sourceTree = "<group>"; };
-		50ACA0B51E0134FA00BA9A3C /* GRTextEditerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTextEditerView.m; sourceTree = "<group>"; };
-		50ACA0B71E01350C00BA9A3C /* GRTextEditerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRTextEditerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503F92151E0787E300550B6F /* GRTextEditerView */ = {
+			isa = PBXGroup;
+			children = (
+				503F92161E07880B00550B6F /* GRColorPickerButton.h */,
+				503F92171E07880B00550B6F /* GRColorPickerButton.m */,
+				503F92181E07880B00550B6F /* GRColorPickerButton.xib */,
+				503F92191E07880B00550B6F /* GRColorPickerCollectionViewCell.h */,
+				503F921A1E07880B00550B6F /* GRColorPickerCollectionViewCell.m */,
+				503F921B1E07880B00550B6F /* GRColorPickerCollectionViewCell.xib */,
+				503F921C1E07880B00550B6F /* GRColorPickerView.h */,
+				503F921D1E07880B00550B6F /* GRColorPickerView.m */,
+				503F921E1E07880B00550B6F /* GRReadonlyTextView.h */,
+				503F921F1E07880B00550B6F /* GRReadonlyTextView.m */,
+				503F92201E07880B00550B6F /* GRReadonlyTextView.xib */,
+				503F92211E07880B00550B6F /* GRTextEditerView.h */,
+				503F92221E07880B00550B6F /* GRTextEditerView.m */,
+				503F92231E07880B00550B6F /* GRTextEditerView.xib */,
+			);
+			path = GRTextEditerView;
+			sourceTree = "<group>";
+		};
 		50ACA0911E01272500BA9A3C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +102,7 @@
 		50ACA09C1E01272500BA9A3C /* TextDemo */ = {
 			isa = PBXGroup;
 			children = (
+				503F92151E0787E300550B6F /* GRTextEditerView */,
 				50ACA0A01E01272500BA9A3C /* AppDelegate.h */,
 				50ACA0A11E01272500BA9A3C /* AppDelegate.m */,
 				50ACA0A31E01272500BA9A3C /* ViewController.h */,
@@ -89,21 +111,7 @@
 				50ACA0A91E01272500BA9A3C /* Assets.xcassets */,
 				50ACA0AB1E01272500BA9A3C /* LaunchScreen.storyboard */,
 				50ACA0AE1E01272500BA9A3C /* Info.plist */,
-				50108EA61E02998C00875DBB /* GRColorPickerButton.h */,
-				50108EA71E02998C00875DBB /* GRColorPickerButton.m */,
-				50108EA91E0299A200875DBB /* GRColorPickerButton.xib */,
 				50ACA09D1E01272500BA9A3C /* Supporting Files */,
-				50ACA0B41E0134FA00BA9A3C /* GRTextEditerView.h */,
-				50ACA0B51E0134FA00BA9A3C /* GRTextEditerView.m */,
-				50ACA0B71E01350C00BA9A3C /* GRTextEditerView.xib */,
-				50108EA01E01504B00875DBB /* GRReadonlyTextView.h */,
-				50108EA11E01504B00875DBB /* GRReadonlyTextView.m */,
-				50108EA31E01505800875DBB /* GRReadonlyTextView.xib */,
-				50108EAB1E029FA500875DBB /* GRColorPickerView.h */,
-				50108EAC1E029FA500875DBB /* GRColorPickerView.m */,
-				50108EB81E02B0F200875DBB /* GRColorPickerCollectionViewCell.h */,
-				50108EB91E02B0F200875DBB /* GRColorPickerCollectionViewCell.m */,
-				50108EBA1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib */,
 			);
 			path = TextDemo;
 			sourceTree = "<group>";
@@ -175,13 +183,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50108EA41E01505800875DBB /* GRReadonlyTextView.xib in Resources */,
-				50108EBC1E02B0F200875DBB /* GRColorPickerCollectionViewCell.xib in Resources */,
+				503F922A1E07880B00550B6F /* GRReadonlyTextView.xib in Resources */,
 				50ACA0AD1E01272500BA9A3C /* LaunchScreen.storyboard in Resources */,
-				50108EAA1E0299A200875DBB /* GRColorPickerButton.xib in Resources */,
 				50ACA0AA1E01272500BA9A3C /* Assets.xcassets in Resources */,
+				503F92251E07880B00550B6F /* GRColorPickerButton.xib in Resources */,
+				503F922C1E07880B00550B6F /* GRTextEditerView.xib in Resources */,
+				503F92271E07880B00550B6F /* GRColorPickerCollectionViewCell.xib in Resources */,
 				50ACA0A81E01272500BA9A3C /* Main.storyboard in Resources */,
-				50ACA0B81E01350C00BA9A3C /* GRTextEditerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,13 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				50ACA0A51E01272500BA9A3C /* ViewController.m in Sources */,
-				50108EA21E01504B00875DBB /* GRReadonlyTextView.m in Sources */,
+				503F92281E07880B00550B6F /* GRColorPickerView.m in Sources */,
 				50ACA0A21E01272500BA9A3C /* AppDelegate.m in Sources */,
+				503F922B1E07880B00550B6F /* GRTextEditerView.m in Sources */,
+				503F92291E07880B00550B6F /* GRReadonlyTextView.m in Sources */,
+				503F92261E07880B00550B6F /* GRColorPickerCollectionViewCell.m in Sources */,
+				503F92241E07880B00550B6F /* GRColorPickerButton.m in Sources */,
 				50ACA09F1E01272500BA9A3C /* main.m in Sources */,
-				50108EBB1E02B0F200875DBB /* GRColorPickerCollectionViewCell.m in Sources */,
-				50108EAD1E029FA500875DBB /* GRColorPickerView.m in Sources */,
-				50108EA81E02998D00875DBB /* GRColorPickerButton.m in Sources */,
-				50ACA0B61E0134FA00BA9A3C /* GRTextEditerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
