@@ -128,7 +128,11 @@ static const CGFloat __GRHalf = .5f;
 }
 
 - (void)__disableEditWithoutChangeFrame {
-    _isEditing = FALSE; 
+    if (!_isEditing) {
+        return; 
+    }
+    
+    _isEditing = FALSE;
     self.editFinishButton.enabled = FALSE;
     self.editFinishButton.hidden = TRUE;
     self.textView.hidden = TRUE;
@@ -136,7 +140,11 @@ static const CGFloat __GRHalf = .5f;
     self.readonlyTextView.bounds = self.textView.bounds;
     self.readonlyTextView.hidden = FALSE;
     [self.textView endEditing:YES]; 
-    [self endEditing:YES]; 
+    [self endEditing:YES];
+    
+    if (self.delegate) {
+        [self.delegate textEditer:self changedEditing:_isEditing];
+    }
 }
 
 - (void)__becomeEditingAnimationWithCompletion:(void (^)())completion {
