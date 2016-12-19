@@ -15,6 +15,7 @@ static const CGFloat __GRAnimationDuration = .2;
 static const CGFloat __GRMinTouchWidth = 50;
 static const CGFloat __GRMinTouchHeight = 50;
 static const CGFloat __GREditFinishButtonAlpha = .5f;
+static const CGFloat __GRHalf = .5f;
 
 @interface GRTextEditerView () <GRReadonlyTextViewDelegate, UITextViewDelegate>
 
@@ -67,15 +68,15 @@ static const CGFloat __GREditFinishButtonAlpha = .5f;
         CGFloat centerY = self.readonlyTextView.center.y;
         
         if (centerX > self.frame.size.width) {
-            centerX = self.frame.size.width - self.readonlyTextView.frame.size.width * .5;
+            centerX = self.frame.size.width - self.readonlyTextView.frame.size.width * __GRHalf;
         } else if (centerX < 0) {
-            centerX = self.readonlyTextView.frame.size.width * .5;
+            centerX = self.readonlyTextView.frame.size.width * __GRHalf;
         }
         
         if (centerY > self.frame.size.height) {
-            centerY = self.frame.size.height - self.readonlyTextView.frame.size.height * .5;
+            centerY = self.frame.size.height - self.readonlyTextView.frame.size.height * __GRHalf;
         } else if (centerY < 0) {
-            centerY = self.readonlyTextView.frame.size.height * .5;
+            centerY = self.readonlyTextView.frame.size.height * __GRHalf;
         }
         
         self.readonlyTextView.center = CGPointMake(centerX, centerY);
@@ -184,8 +185,6 @@ static const CGFloat __GREditFinishButtonAlpha = .5f;
     xScale = [self __xscale:self.readonlyTextView.transform];
     yScale = [self __yscale:self.readonlyTextView.transform]; 
     
- 
-    NSLog(@"scale : %f %f", xScale, yScale);
     UIView *view = [self.textView snapshotViewAfterScreenUpdates:FALSE];
     if (view) {
         view.frame = self.textView.frame;

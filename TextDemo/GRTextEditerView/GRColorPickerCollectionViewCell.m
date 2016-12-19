@@ -11,6 +11,8 @@
 static const CGFloat __GRAnimationDuration = .1f;
 static const CGFloat __GRMinScale = .8;
 static const CGFloat __GRNormalScale = 1.f;
+static const CGFloat __GRHalf = .5f;
+static const CGFloat __GRColorBorderWidth = 1.f;
 
 @interface GRColorPickerCollectionViewCell ()<UIGestureRecognizerDelegate>
 
@@ -24,10 +26,10 @@ static const CGFloat __GRNormalScale = 1.f;
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
-    self.colorContainerView.layer.cornerRadius = self.frame.size.width * .5;
+    self.colorContainerView.layer.cornerRadius = self.frame.size.width * __GRHalf;
     self.colorContainerView.layer.masksToBounds = TRUE;
     self.colorContainerView.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.colorContainerView.layer.borderWidth = 1.f;
+    self.colorContainerView.layer.borderWidth = __GRColorBorderWidth;
     
     UILongPressGestureRecognizer *tapGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
     tapGesture.minimumPressDuration = 0.f;

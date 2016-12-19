@@ -148,11 +148,13 @@ static NSString * const __GRCollectionCellIdntifier = @"cellId";
 
 @end
 
+static const CGFloat __GRHorizontalOffsetXSpan = 5.f;
+
 @implementation GRColorCollectionViewLayout
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     CGFloat offsetAdjustment = MAXFLOAT;
-    CGFloat horizontalOffset = proposedContentOffset.x + 5;
+    CGFloat horizontalOffset = proposedContentOffset.x + __GRHorizontalOffsetXSpan;
     
     CGRect targetRect = CGRectMake(proposedContentOffset.x, 0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
     

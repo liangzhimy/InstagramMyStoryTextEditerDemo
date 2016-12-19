@@ -8,6 +8,10 @@
 
 #import "GRReadonlyTextView.h"
 
+static const CGFloat __GRWidthDelta = 50.f;
+static const CGFloat __GRHeightDelta = 50.f;
+static const CGFloat __GRHalf = .5;
+
 @interface GRReadonlyTextView () <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *touchButton;
 @end
@@ -108,9 +112,7 @@
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event {
     CGRect bounds = self.bounds;
-    CGFloat widthDelta = 50;
-    CGFloat heightDelta = 50;
-    bounds = CGRectInset(bounds, -0.5* widthDelta, -0.5* heightDelta);
+    bounds = CGRectInset(bounds, -__GRHalf * __GRWidthDelta, -__GRHalf * __GRHeightDelta);
     return CGRectContainsPoint(bounds, point);
 }
 
