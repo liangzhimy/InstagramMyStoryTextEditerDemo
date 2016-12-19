@@ -123,7 +123,7 @@ static const CGFloat __GRHalf = .5f;
     }
     
     if (self.delegate) {
-        [self.delegate textEditer:self changedisEditing:isEditing]; 
+        [self.delegate textEditer:self changedEditing:isEditing];
     } 
 }
 

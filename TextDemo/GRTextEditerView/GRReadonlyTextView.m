@@ -27,6 +27,7 @@ static const CGFloat __GRHalf = .5;
 
 - (void)__config {
     [self __addGestureRecognizerToView:self];
+    self.textView.text = @""; 
     self.textView.editable = FALSE;
     self.textView.backgroundColor = [UIColor clearColor];
     self.backgroundColor = [UIColor clearColor]; 

@@ -12,7 +12,7 @@
 
 @protocol GRTextEditerViewDelegate <NSObject>
 
-- (void)textEditer:(GRTextEditerView *)editerView changedisEditing:(BOOL)isEditing;
+- (void)textEditer:(GRTextEditerView *)editerView changedEditing:(BOOL)isEditing;
 
 @end
 
