@@ -104,8 +104,8 @@ static const CGFloat __GRHalf = .5f;
         [self.textView endEditing:YES];
         [self endEditing:YES];
         
-        self.editFinishButton.enabled = FALSE;
-        self.editFinishButton.hidden = TRUE;
+        self.editFinishButton.enabled = TRUE;
+        
         self.textView.hidden = TRUE;
         self.readonlyTextView.text = self.textView.text;
         self.readonlyTextView.bounds = self.textView.bounds;
@@ -152,6 +152,7 @@ static const CGFloat __GRHalf = .5f;
             view.transform = CGAffineTransformScale(view.transform, xScale, yScale);
         }
         self.editFinishButton.alpha = __GREditFinishButtonAlpha;
+        self.editFinishButton.backgroundColor = [UIColor blackColor];
     } completion:^(BOOL finished) {
         if (!finished) {
             return;
@@ -198,6 +199,7 @@ static const CGFloat __GRHalf = .5f;
             view.transform = CGAffineTransformMakeRotation(radians);
             view.center = self.readonlyTextView.center;
             view.transform = CGAffineTransformScale(view.transform, xScale, yScale);
+            self.editFinishButton.backgroundColor = [UIColor clearColor];
         }
     } completion:^(BOOL finished) {
         if (!finished) {
@@ -215,12 +217,17 @@ static const CGFloat __GRHalf = .5f;
 } 
 
 - (IBAction)editFinishButtonPressed:(id)sender {
-    self.isEditing = FALSE;
-    [self endEditing:YES];
-    [self.textView endEditing:YES];
+    if (self.isEditing) {
+        self.isEditing = FALSE;
+        [self endEditing:YES];
+        [self.textView endEditing:YES];
+    } else {
+        self.isEditing = TRUE;
+        [self.textView becomeFirstResponder];
+    } 
 }
 
-#pragma mark - property 
+#pragma mark - property
 - (void)setColor:(UIColor *)color {
     self.textView.textColor = color;
     self.readonlyTextView.color = color; 
