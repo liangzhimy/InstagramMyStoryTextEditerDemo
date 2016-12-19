@@ -166,12 +166,12 @@ static const CGFloat __GREditFinishButtonAlpha = .5f;
     }];
 } 
 
-- (CGFloat)xscale:(CGAffineTransform)transform {
+- (CGFloat)__xscale:(CGAffineTransform)transform {
     CGAffineTransform t = transform;
     return sqrt(t.a * t.a + t.c * t.c);
 }
 
-- (CGFloat)yscale:(CGAffineTransform)transform {
+- (CGFloat)__yscale:(CGAffineTransform)transform {
     CGAffineTransform t = transform;
     return sqrt(t.b * t.b + t.d * t.d);
 }
@@ -181,8 +181,8 @@ static const CGFloat __GREditFinishButtonAlpha = .5f;
     CGFloat xScale = self.readonlyTextView.transform.a;
     CGFloat yScale = self.readonlyTextView.transform.d;
     
-    xScale = [self xscale:self.readonlyTextView.transform];
-    yScale = [self yscale:self.readonlyTextView.transform]; 
+    xScale = [self __xscale:self.readonlyTextView.transform];
+    yScale = [self __yscale:self.readonlyTextView.transform]; 
     
  
     NSLog(@"scale : %f %f", xScale, yScale);
