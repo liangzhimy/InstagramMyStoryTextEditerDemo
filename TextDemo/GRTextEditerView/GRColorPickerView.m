@@ -40,7 +40,6 @@ static NSString * const __GRCollectionCellIdntifier = @"cellId";
 
 - (void)__config {
     [self addSubview:self.collectionView];
-    self.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)layoutSubviews {

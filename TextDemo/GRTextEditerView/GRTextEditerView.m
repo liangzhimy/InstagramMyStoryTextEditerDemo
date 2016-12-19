@@ -84,6 +84,10 @@ static const CGFloat __GRHalf = .5f;
 }
 
 - (void)setIsEditing:(BOOL)isEditing {
+    if (_isEditing == isEditing) {
+        return; 
+    }
+    
     _isEditing = isEditing;
     
     if (isEditing) {
@@ -117,6 +121,10 @@ static const CGFloat __GRHalf = .5f;
             self.readonlyTextView.hidden = FALSE;
         }];
     }
+    
+    if (self.delegate) {
+        [self.delegate textEditer:self changedisEditing:isEditing]; 
+    } 
 }
 
 - (void)__disableEditWithoutChangeFrame {

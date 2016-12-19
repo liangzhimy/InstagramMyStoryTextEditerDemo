@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class GRTextEditerView;
+
+@protocol GRTextEditerViewDelegate <NSObject>
+
+- (void)textEditer:(GRTextEditerView *)editerView changedisEditing:(BOOL)isEditing;
+
+@end
+
 @interface GRTextEditerView : UIView
 
 @property (assign, nonatomic) BOOL isEditing;
-@property (strong, nonatomic) UIColor *color; 
+@property (strong, nonatomic) UIColor *color;
+@property (weak, nonatomic) id<GRTextEditerViewDelegate> delegate;
 
 - (void)config;
 
