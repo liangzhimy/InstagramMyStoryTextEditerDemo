@@ -18,6 +18,10 @@ static const CGFloat __GRHalf = .5;
 
 @implementation GRReadonlyTextView
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         [self __config]; 

@@ -41,10 +41,10 @@ static const CGFloat __GRHalf = .5f;
     self.textView.frame = CGRectMake(0, yOffset, self.frame.size.width, __GRTextViewHeight);
     self.textView.scrollEnabled = FALSE;
     self.textView.delegate = self;
-    self.textView.textColor = [UIColor blackColor];
+    self.textView.text = @"";
+    self.color = [UIColor whiteColor];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
     [self.textView addGestureRecognizer:panGesture];
-    self.readonlyTextView.color = [UIColor blackColor];
     
     [self.containerView addSubview:self.readonlyTextView];
     self.readonlyTextView.frame = self.textView.frame;
