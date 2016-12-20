@@ -37,7 +37,7 @@ static const CGFloat __GRDefaultPickerOffsetY = 20;
     [self.textEditerContainerView layoutIfNeeded];
     self.textEditerView.frame = self.textEditerContainerView.bounds;
     [self.textEditerView config];
-    self.textEditerView.fixTopHeight = 40.f;
+    self.textEditerView.fixTopHeight = 0.f;
     
     self.textEditerView.color = [UIColor redColor];
     

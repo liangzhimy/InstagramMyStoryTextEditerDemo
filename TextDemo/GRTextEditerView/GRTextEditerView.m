@@ -16,8 +16,9 @@ static const CGFloat __GRMinTouchWidth = 50;
 static const CGFloat __GRMinTouchHeight = 50;
 static const CGFloat __GREditFinishButtonAlpha = 0.75f;
 static const CGFloat __GRHalf = .5f;
-static const CGFloat __GRLeftRightSpan = 30.f;
+static const CGFloat __GRLeftRightSpan = 5.f;
 static const CGFloat __GRTextViewPanGestureMinOffset = 2.0f;
+static const CGFloat __GRMinZeroFloat = 0.001;
 
 static void * const __GRMessagesKeyValueObservingContext = @"__GRMessagesKeyValueObservingContext";
 static NSString * const __GRTextViewContentSizeKeyPath = @"contentSize";
@@ -63,6 +64,10 @@ static NSString * const __GRTextViewContentSizeKeyPath = @"contentSize";
     [self.containerView layoutIfNeeded];
     [self.readonlyTextView layoutIfNeeded];
     [self.readonlyTextView layoutSubviews];
+    
+    if (self.fixTopHeight <= __GRMinZeroFloat) {
+        self.fixTopHeight = 0.f;
+    } 
     
     [self __addObserver];
     self.isEditing = FALSE;
@@ -339,13 +344,13 @@ static NSString * const __GRTextViewContentSizeKeyPath = @"contentSize";
     }
 }
 
-- (void)__resizeTextView:(CGFloat)_fixMaxHeight {
+- (void)__resizeTextView:(CGFloat)fixMaxHeight {
   UITextView *textView = self.textView;
             CGFloat fixedWidth = textView.frame.size.width;
             CGFloat fixedHeight = textView.frame.size.height;
             CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
             CGRect newFrame = textView.frame;
-            CGFloat newHeight = MIN(_fixMaxHeight, newSize.height);
+            CGFloat newHeight = MIN(fixMaxHeight, newSize.height);
             newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newHeight);
             CGFloat offsetY = newFrame.size.height - fixedHeight;
             textView.frame = CGRectMake(newFrame.origin.x, newFrame.origin.y - offsetY, newFrame.size.width, newFrame.size.height);
