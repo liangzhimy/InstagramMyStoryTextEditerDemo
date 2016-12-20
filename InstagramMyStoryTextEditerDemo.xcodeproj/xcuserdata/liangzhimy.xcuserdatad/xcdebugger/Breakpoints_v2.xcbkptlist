@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TextDemo/GRTextEditerView/GRTextEditerView.m"
-            timestampString = "503892734.957647"
+            timestampString = "503906894.771557"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
             landmarkName = "-__scrollComposerTextViewToBottomAnimated:"
             landmarkType = "7">
          </BreakpointContent>

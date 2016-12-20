@@ -17,7 +17,7 @@ static const CGFloat __GRMinTouchHeight = 50;
 static const CGFloat __GREditFinishButtonAlpha = 0.75f;
 static const CGFloat __GRHalf = .5f;
 static const CGFloat __GRLeftRightSpan = 5.f;
-static const CGFloat __GRTextViewPanGestureMinOffset = 2.0f;
+static const CGFloat __GRTextViewPanGestureMinOffset = 8.0f;
 static const CGFloat __GRMinZeroFloat = 0.001;
 
 static void * const __GRMessagesKeyValueObservingContext = @"__GRMessagesKeyValueObservingContext";
@@ -386,9 +386,9 @@ static NSString * const __GRTextViewContentSizeKeyPath = @"contentSize";
 
 #pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    if (self.textView.contentSize.height - self.textView.bounds.size.height > __GRTextViewPanGestureMinOffset) {
+    if (self.textView.contentSize.height - self.textView.bounds.size.height > self.textView.font.pointSize) {
         return FALSE;
-    } 
+    }
     return TRUE;
 }
 
