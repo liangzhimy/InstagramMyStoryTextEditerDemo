@@ -16,8 +16,15 @@ static const CGFloat __GRMinTouchWidth = 50;
 static const CGFloat __GRMinTouchHeight = 50;
 static const CGFloat __GREditFinishButtonAlpha = 0.75f;
 static const CGFloat __GRHalf = .5f;
+static const CGFloat __GRLeftRightSpan = 30.f;
+static const CGFloat __GRTextViewPanGestureMinOffset = 2.0f;
 
-@interface GRTextEditerView () <GRReadonlyTextViewDelegate, UITextViewDelegate>
+static void * const __GRMessagesKeyValueObservingContext = @"__GRMessagesKeyValueObservingContext";
+static NSString * const __GRTextViewContentSizeKeyPath = @"contentSize";
+
+@interface GRTextEditerView () <GRReadonlyTextViewDelegate, UIGestureRecognizerDelegate> {
+    CGFloat _fixMaxHeight;
+} 
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *editFinishButton;
@@ -35,15 +42,19 @@ static const CGFloat __GRHalf = .5f;
     self.isEditing = FALSE;
 }
 
+- (void)dealloc {
+    [self __removeObserver];
+} 
+
 - (void)config {
     CGFloat yOffset = self.frame.size.height * __GRYPercent;
     [self layoutIfNeeded];
-    self.textView.frame = CGRectMake(0, yOffset, self.frame.size.width, __GRTextViewHeight);
-    self.textView.scrollEnabled = FALSE;
-    self.textView.delegate = self;
+    self.textView.frame = CGRectMake(__GRLeftRightSpan, yOffset, self.frame.size.width - __GRLeftRightSpan * 2, __GRTextViewHeight);
+    self.textView.scrollEnabled = TRUE;
     self.textView.text = @"";
     self.color = [UIColor whiteColor];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture:)];
+    panGesture.delegate = self;
     [self.textView addGestureRecognizer:panGesture];
     
     [self.containerView addSubview:self.readonlyTextView];
@@ -53,6 +64,7 @@ static const CGFloat __GRHalf = .5f;
     [self.readonlyTextView layoutIfNeeded];
     [self.readonlyTextView layoutSubviews];
     
+    [self __addObserver];
     self.isEditing = FALSE;
 }
 
@@ -112,7 +124,11 @@ static const CGFloat __GRHalf = .5f;
         
         self.textView.hidden = TRUE;
         self.readonlyTextView.text = self.textView.text;
-        self.readonlyTextView.bounds = self.textView.bounds;
+        
+        CGFloat fixedWidth = self.textView.frame.size.width;
+        CGSize realSize = [self.textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+        self.readonlyTextView.bounds = CGRectMake(0, 0, realSize.width, realSize.height);
+        
         [self.readonlyTextView layoutIfNeeded];
         [self.readonlyTextView layoutSubviews];
         
@@ -129,7 +145,7 @@ static const CGFloat __GRHalf = .5f;
 
 - (void)__disableEditWithoutChangeFrame {
     if (!_isEditing) {
-        return; 
+        return;
     }
     
     _isEditing = FALSE;
@@ -137,7 +153,11 @@ static const CGFloat __GRHalf = .5f;
     self.editFinishButton.hidden = TRUE;
     self.textView.hidden = TRUE;
     self.readonlyTextView.text = self.textView.text;
-    self.readonlyTextView.bounds = self.textView.bounds;
+    
+    CGFloat fixedWidth = self.textView.frame.size.width;
+    CGSize realSize = [self.textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+    self.readonlyTextView.bounds = CGRectMake(0, 0, realSize.width, realSize.height);
+    
     self.readonlyTextView.hidden = FALSE;
     [self.textView endEditing:YES]; 
     [self endEditing:YES];
@@ -253,6 +273,11 @@ static const CGFloat __GRHalf = .5f;
     return self.readonlyTextView.color; 
 }
 
+- (void)setFixTopHeight:(CGFloat)fixTopHeight {
+    _fixTopHeight = fixTopHeight;
+    _fixMaxHeight = self.textView.frame.origin.y - fixTopHeight + self.textView.frame.size.height;
+} 
+
 #pragma mark - lazy property
 - (GRReadonlyTextView *)readonlyTextView {
     if (!_readonlyTextView) {
@@ -268,19 +293,7 @@ static const CGFloat __GRHalf = .5f;
     [self.textView becomeFirstResponder];
 }
 
-#pragma mark - textViewDelegate
-- (void)textViewDidChange:(UITextView *)textView {
-    CGFloat fixedWidth = textView.frame.size.width;
-    CGFloat fixedHeight = textView.frame.size.height;
-    CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
-    CGRect newFrame = textView.frame;
-    newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
-    CGFloat offsetY = newFrame.size.height - fixedHeight;
-    textView.frame = CGRectMake(newFrame.origin.x, newFrame.origin.y - offsetY, newFrame.size.width, newFrame.size.height);
-}
-
-#pragma mark - Gesture 
-
+#pragma mark - Gesture
 - (void)panGesture:(UIPanGestureRecognizer *)panGestureRecognizer {
     if (self.textView.text.length == 0) {
         return;
@@ -311,5 +324,68 @@ static const CGFloat __GRHalf = .5f;
             break;
     }
 } 
+
+#pragma mark - observer
+- (void)__addObserver {
+    [self.textView addObserver:self forKeyPath:__GRTextViewContentSizeKeyPath options:NSKeyValueObservingOptionNew context:__GRMessagesKeyValueObservingContext];
+}
+
+- (void)__removeObserver {
+    @try {
+        [self.textView removeObserver:self
+                           forKeyPath:__GRTextViewContentSizeKeyPath
+                              context:__GRMessagesKeyValueObservingContext];
+    } @catch (NSException *exception) {
+    }
+}
+
+- (void)__resizeTextView:(CGFloat)_fixMaxHeight {
+  UITextView *textView = self.textView;
+            CGFloat fixedWidth = textView.frame.size.width;
+            CGFloat fixedHeight = textView.frame.size.height;
+            CGSize newSize = [textView sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
+            CGRect newFrame = textView.frame;
+            CGFloat newHeight = MIN(_fixMaxHeight, newSize.height);
+            newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newHeight);
+            CGFloat offsetY = newFrame.size.height - fixedHeight;
+            textView.frame = CGRectMake(newFrame.origin.x, newFrame.origin.y - offsetY, newFrame.size.width, newFrame.size.height);
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if (context == __GRMessagesKeyValueObservingContext) {
+        if (object == self.textView
+            && [keyPath isEqualToString:__GRTextViewContentSizeKeyPath]) {
+            [self __scrollComposerTextViewToBottomAnimated:YES];
+            [self __resizeTextView:_fixMaxHeight];
+        }
+    }
+}
+
+- (void)__scrollComposerTextViewToBottomAnimated:(BOOL)animated {
+    UITextView *textView = self.textView;
+    CGPoint contentOffsetToShowLastLine = CGPointMake(0.0f, textView.contentSize.height - CGRectGetHeight(textView.bounds));
+    
+    if (!animated) {
+        textView.contentOffset = contentOffsetToShowLastLine;
+        return;
+    }
+    
+    [UIView animateWithDuration:0.01
+                          delay:0.01
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         textView.contentOffset = contentOffsetToShowLastLine;
+                     }
+                     completion:nil];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (self.textView.contentSize.height - self.textView.bounds.size.height > __GRTextViewPanGestureMinOffset) {
+        return FALSE;
+    } 
+    return TRUE;
+}
+
 
 @end

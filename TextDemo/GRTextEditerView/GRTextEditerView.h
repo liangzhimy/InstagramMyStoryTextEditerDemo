@@ -18,6 +18,7 @@
 
 @interface GRTextEditerView : UIView
 
+@property (assign, nonatomic) CGFloat fixTopHeight;
 @property (assign, nonatomic) BOOL isEditing;
 @property (strong, nonatomic) UIColor *color;
 @property (weak, nonatomic) id<GRTextEditerViewDelegate> delegate;
